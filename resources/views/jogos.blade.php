@@ -9,6 +9,8 @@
     </head>
     <body>
        <h1>Testando routes com views</h1>
+       <p>Id: {{ $id }}</p>
+       <p>Nome: {{ $nome }}</p>
        <a href="{{ route('home-index') }}"> Clique aqui </a>
     </body>
 </html>

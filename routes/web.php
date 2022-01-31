@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JogosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,47 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
 
- // Route::view('/jogos', 'jogos');
-
- /*
- Route::get('/jogos', function () {
-    return "Curso Laravel";
- });
-
- */
-
-/*
- Route::view('/jogos', 'jogos', ['name' => 'Aprendendo Laravel']);
- */
-
- /*
- Route::get('/jogos/{name?}', function($name = null){
-     return view('jogos', ['nomeJogos'=>$name]);
- })->where('name', '[A-Za-z]+');
-
- */
-
- /*
-Route::get('/jogos/{id?}', function($id = null){
-    return view('jogos', ['idJogos'=>$id]);
-})->where('id', '[0-9]+');
-*/
-
-/*
-Route::get('/jogos/{id?}/{name?}', function($id = null, $name = null){
-    return view('jogos', ['idJogos'=>$id, 'nomeJogos'=>$name]);
-})->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
-*/
-
-Route::get('/jogos', function () {
-    return view('jogos');
-});
+Route::get('/jogos', [JogosController::class, 'index']);
 
 Route::get('/home', function () {
     return view('welcome');
