@@ -11,6 +11,6 @@ class JogosController extends Controller
      //dd('Olá Mundo');
      $nome = 'GTA';
      $id = 1;
-     return view('jogos', ['nome' => $nome, 'id' => $id]);
+     return view('jogos.index', ['nome' => $nome, 'id' => $id]);
    }
 }
